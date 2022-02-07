@@ -1,0 +1,414 @@
+
+
+/*sol*/
+.leftBar {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  position: relative;
+  transition: .5s ease all;
+  width: 280px;
+}
+.leftBar div{
+  transition: .5s ease all;
+}
+.leftBar.minifyLeftBar {
+  width: 60px;
+}
+
+.leftBarTopSection.minifyLeftBar {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leftBarMenu.minifyLeftBar {
+  gap: 40px;
+  align-items: center;
+}
+
+.leftBarMenu.minifyLeftBar span {
+  position: absolute;
+  transform: translateX(400%);
+}
+
+.leftBarAds.minifyLeftBar {
+  display: none;
+}
+
+.leftBarProfile.minifyLeftBar .leftBarProfileInfo {
+  position: absolute;
+  transform: translateX(200%);
+}
+
+.leftBarTopSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .5s ease all;
+  font-size:1em;
+}
+
+.leftBarTopSection .logo strong {
+  color: var(--primary);
+}
+.leftBarTopSection .menuSettings{
+    position: relative;
+    z-index:10;
+}
+.leftBarTopSection .menuActions{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--primary-t1);
+    position: absolute;
+    right:0;
+    top: 30px;
+    width:122px;
+}
+.leftBarTopSection .menuCollapse, .leftBarTopSection .toggleTheme{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--dark);
+  width:100%;
+  height:40px;
+  padding:0 10px;
+  background:var(--white);
+}
+.leftBarTopSection .menuCollapse:hover, .leftBarTopSection .toggleTheme:hover{
+  background: var(--primary-t1);
+}
+.leftBarTopSection .toggleTheme label{
+  width: 30px;
+  height: 15px;
+  border-radius: 4px;
+  background: var(--light-gray);
+  position: relative;
+}
+.leftBarTopSection .toggleTheme label::after{
+  content:'';
+  position: absolute;
+  top:2px;
+  left:2px;
+  width:13px;
+  height:11px;
+  background:var(--dark-gray);
+  border-radius:4px;
+}
+.leftBarTopSection .toggleTheme input:checked + label:after{
+  right:2px;
+  left:unset;
+}
+
+.leftBarMenu {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: auto 0;
+  transition: .5s ease all;
+}
+
+.leftBarMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-gray);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .5s ease all;
+
+}
+
+.leftBarMenuItem i {
+  font-size: 16px;
+}
+
+.leftBarMenuItem:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.leftBarMenuItem.active {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.leftBarAds {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--primary-t1);
+  padding: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  margin-bottom: auto;
+  transition: .5s ease all;
+}
+
+.leftBarAdsItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.getProBtn {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+}
+
+.leftBarProfile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 5px;
+  background: var(--primary-t1);
+  border-radius: 10px;
+  transition: .5s ease all;
+}
+
+.leftBarProfilePicture {
+  width: 60px;
+  border-radius: 60px;
+}
+
+.leftBarProfileName {
+  font-weight: 700;
+}
+
+.leftBarProfileMail {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+/*orta*/
+.content {
+  flex: 0 1 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-bottom:0px;
+  background: var(--light-gray);
+  gap: 20px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.bottomGradient {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: calc(100% - 20px);
+  height: 100px;
+  background: linear-gradient(0deg, var(--light-gray), transparent);
+}
+.searchSection {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+.searchSection #searchIcon {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--dark-gray);
+  background: var(--white);
+  padding-left: 10px;
+  transition: .5s ease all;
+  color: var(--dark);
+}
+
+.searchSection span {
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  right: 1px;
+  top: 1px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
+/*sağ*/
+.rightBar {
+  flex: 0 1 15%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--white);
+}
+
+@media screen and (max-width:1100px) {
+    .iconSection {
+      transition: height .5s ease;
+      height: calc(100vh - 130px);
+    }
+
+    .iconSectionItem {
+      flex: 0 1 calc(25% - 1vw);
+      border-radius: 1vw;
+      margin-bottom: 1vw;
+    }
+
+
+    .iconSectionItem:nth-child(2n) {
+      margin-left: 1vw;
+      margin-right: 1vw;
+    }
+
+    .iconSectionItem:nth-child(4n) {
+      margin: 0;
+      margin-bottom: 1vw;
+    }
+
+    .iconSectionItem:nth-child(10n - 1) {
+      margin-right: unset;
+      margin-bottom: 1vw;
+    }
+
+    .iconSectionItem:nth-child(4n - 1) {
+      margin-right: 1vw;
+      margin-bottom: 1vw;
+    }
+
+    .iconSectionItem label {
+      border-radius: 1vw;
+    }
+}
+@media screen and (max-width:800px) {
+  body {
+    flex-direction: column;
+  }
+
+  .leftBar {
+    flex-direction: row;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px 20px;
+  }
+  
+  .leftBarTopSection {
+    flex-direction: row-reverse;
+    gap:20px;
+    width: unset;
+  }
+  
+  .leftBarTopSection .menuCollapse {
+    display: none;
+  }
+  .leftBarTopSection .menuActions{
+    left:0;
+  }
+  
+  .leftBarMenu {
+    margin: 0 auto;
+    flex-direction: row;
+    width: unset;
+  }
+  
+  .leftBarAds {
+    display: none;
+  }
+  
+  .leftBarProfile {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .leftBarProfileInfo {
+    display: none;
+  }
+  .rightBar{
+    display:none;
+  position: relative;
+  z-index:50;
+  }
+  .openRightBar,.closeRightBar{
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    border-radius: 40px;
+    width: 100px;
+    background: var(--white);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px var(--light-gray);
+  }
+  .openRightBar{
+    position: sticky;
+    bottom:20px;
+    height:40px;
+    padding:10px;
+    top:unset;
+  }
+  .content{
+    padding:10px;
+    gap:10px;
+  }
+  .bottomGradient{
+    height: 30px;
+    width: calc(100% - 45px);
+  }
+ 
+
+}
+
+@media screen and (max-width:600px) {
+  .leftBarMenuItem span {
+    display: none;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .leftBar {
+    flex-direction: column;
+    min-height: 80px;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .leftBarTopSection {
+    width: max-content;
+  }
+
+  .leftBarProfile {
+    display: none;
+  }
+}

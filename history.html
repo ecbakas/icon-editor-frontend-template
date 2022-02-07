@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ecbakas | Icons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/image/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/style/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/style/layout.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/style/history.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <style>
+        #preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 3000;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10vw;
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+</head>
+
+<body>
+    <div id="preloader">ec<strong>bakas</strong></div>
+    <div class="leftBar">
+        <div class="leftBarTopSection">
+            <div class="logo">ec<strong>bakas</strong></div>
+
+            <div class="menuSettings">
+                <span class="menuIcon"><i data-feather="more-vertical"></i></span>
+                <div class="menuActions">
+                    <div class="menuCollapse">
+                        <span> Minify Menu</span>
+                        <i data-feather="arrow-left"></i>
+                    </div>
+                    <div class="toggleTheme">
+                        <span>Dark Mode</span>
+                        <input type="checkbox" name="selTheme" id="selTheme" value="light" hidden>
+                        <label for="selTheme"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leftBarMenu">
+            <a href="index.html" class="leftBarMenuItem"><i data-feather="slack"></i><span>Icons</span></a>
+            <a href="history.html" class="leftBarMenuItem active"><i data-feather="clock"></i><span>History</span></a>
+            <a href="" class="leftBarMenuItem"><i data-feather="info"></i><span>About</span></a>
+            <a href="" class="leftBarMenuItem"><i data-feather="help-circle"></i><span>Help</span></a>
+            <a href="" class="leftBarMenuItem"><i data-feather="user"></i><span>Profile</span></a>
+        </div>
+        <div class="leftBarAds">
+            <span class="leftBarAdsItem"><i data-feather="check-square"></i>100% icon access</span>
+            <span class="leftBarAdsItem"><i data-feather="check-square"></i>Request icons</span>
+            <span class="leftBarAdsItem"><i data-feather="plus-square"></i>And more</span>
+            <a href="" class="btn btn-fill getProBtn">Get Pro</a>
+        </div>
+        <a class="leftBarProfile">
+            <img src="assets/image/profile.png" alt="profile" class="leftBarProfilePicture" />
+            <div class="leftBarProfileInfo">
+                <span class="leftBarProfileName">Ertuğrulcan Bakas</span>
+                <span class="leftBarProfileMail">ecbakas@gmail.com</span>
+            </div>
+        </a>
+    </div>
+    <div class="content">
+        <div class="bottomGradient"></div>
+        <div class="searchSection">
+            <input type="text" name="search" id="searchIcon" placeholder="Find in history..." />
+            <span><i data-feather="search"></i></span>
+        </div>
+        <div action="" class="historySection implementScroll" id="historySection">
+            <a href="xx" class="historyItem" data-icon="1">
+                <div class="icon"><i data-feather="activity"></i></div>
+                <div class="iconDetails">
+                    <div class="iconName"><b>Icon Name</b>activity</div>
+                    <div class="iconSize"><b>Icon Size</b>100x100</div>
+                    <div class="iconRotation"><b>Icon Rotation</b>50deg</div>
+                    <div class="iconStroke"><b>Icon Stroke</b>2px</div>
+                    <div class="iconColor"><b>Icon Color</b>#000000 <div class="colorRect"></div></div>
+                    <div class="iconOpacity"><b>Icon Opacity</b>100%</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="rightBar">
+
+    </div>
+
+    <script src="/assets/script/main.js"></script>
+    <script src="/assets/script/history.js"></script>
+    <script></script>
+</body>
+
+</html>
